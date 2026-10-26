@@ -1,0 +1,11 @@
+[project]
+name = "model-manager"
+version = "0.1.0"
+description = "Standalone model registry. Answers a harness. Does not switch its models."
+requires-python = ">=3.11"
+
+[project.scripts]
+model-manager = "model_manager.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["model_manager*"]
