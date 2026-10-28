@@ -15,7 +15,8 @@ tests/test_store.py        unittest tests against a temp registry
 ```sh
 python3 -m venv .venv && .venv/bin/pip install -e .
 python3 -m unittest discover -s tests
-python3 -m model_manager --root "$(mktemp -d)" ask coding    # prints []
+# a missing registry exits 2 and does not create registry.json
+python3 -m model_manager --root "$(mktemp -d)" ask coding
 ```
 
 Always use a temp `--root` in tests and manual runs. Never point one at a live registry.
